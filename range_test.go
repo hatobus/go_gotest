@@ -25,6 +25,12 @@ func TestGenerateRangeStruct(t *testing.T) {
 			max:      3,
 			expect:   NewRangeInvalidRangeElementError,
 		},
+		{
+			testname: "同じ数字を上端と下端に設定し構造体を生成することができる",
+			min:      3,
+			max:      3,
+			expect:   nil,
+		},
 	}
 
 	for _, tc := range testcase {

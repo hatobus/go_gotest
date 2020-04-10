@@ -59,7 +59,6 @@ func TestReturnDataPoints(t *testing.T) {
 		testname  string
 		execfunc  []func() string
 		expectval []string
-		// expecterr: error
 	}{
 		{
 			testname: "下端を文字列表現で表すことができる",
@@ -69,7 +68,6 @@ func TestReturnDataPoints(t *testing.T) {
 				},
 			},
 			expectval: []string{strconv.FormatInt(testrange.Min, 10)},
-			// expecterr: nil,
 		},
 		{
 			testname: "上限を文字列表現で返すことができる",
